@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/blurred_view"
+
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,6 +14,15 @@
     tools:context="com.hieptran.tempproject.MainActivity"
     tools:showIn="@layout/activity_main">
 
+
+    <com.fivehundredpx.android.blur.BlurringView
+        android:id="@+id/blurring_view"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_gravity="center"
+        app:blurRadius="11"
+        app:downsampleFactor="6"
+        app:overlayColor="#99FFFFFF"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.fivehundredpx.android.blur.BlurringView;
 
+public class MainActivity extends AppCompatActivity {
+    private BlurringView mBlurringView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        mBlurringView = (BlurringView) findViewById(R.id.blurring_view);
+        View blurredView = findViewById(R.id.blurred_view);
+
+        // Give the blurring view a reference to the blurred view.
+        mBlurringView.setBlurredView(blurredView);
     }
 
     @Override
